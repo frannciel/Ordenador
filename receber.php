@@ -15,6 +15,7 @@ function getPost($valor) {
 }
 
 function setHeader($valor){
+    $colunas ="";
    for ($i = 1; $i <= $valor; $i++){
        $colunas += '<th>Coluna'.$valor.'</th>';
     }
