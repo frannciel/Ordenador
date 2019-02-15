@@ -19,7 +19,9 @@ foreach (explode($eparaLinha, $texto) as $linha) {
     $b = '';
 }
 
-echo setTable(setHead(setTr($a)), setBody($c));
+$tabela = setTable(setHead(setTr($a)), setBody($c));
+
+header("Location:index.php?tabela=".$tabela);
 
 function setTable($header, $body){
     return '<table class="tablesorter">'.$header.$body.'</table>';
@@ -78,7 +80,7 @@ echo setTable(
             setTd('Coluna1').
             setTd('Coluna2')
         )
-    ), 
+    ),
     setBody(
         setTr(
             setTd('Valores').
