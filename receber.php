@@ -26,7 +26,7 @@ $_SESSION['tabela'] = setTable(setHead(setTr($a)), setBody($c));
 header("Location:index.php");
 
 function setTable($header, $body){
-    return '<table class="tablesorter">'.$header.$body.'</table>';
+    return '<table class="tablesorter table">'.$header.$body.'</table>';
 }
 
 function setHead($valor){
