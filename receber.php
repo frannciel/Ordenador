@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $eparaLinha  	= getOpcao(getPost('sLinha'));
 $texto		    = getPost('texto');
 $eparaColuna    = getOpcao(getPost('sColuna'));
@@ -19,9 +22,8 @@ foreach (explode($eparaLinha, $texto) as $linha) {
     $b = '';
 }
 
-$tabela = setTable(setHead(setTr($a)), setBody($c));
-
-header("Location:index.php?tabela=".$tabela);
+$_SESSION['tabela'] = setTable(setHead(setTr($a)), setBody($c));
+header("Location:index.php");
 
 function setTable($header, $body){
     return '<table class="tablesorter">'.$header.$body.'</table>';
