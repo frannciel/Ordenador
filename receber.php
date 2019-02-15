@@ -30,7 +30,7 @@ function setTable($header, $body){
 }
 
 function setHead($valor){
-    return '<thead>'.$valor.'</thead>';
+    return '<thead class="thead-dark">'.$valor.'</thead>';
 }
 function setBody($valor){
     return '<tbody>'.$valor.'</tbody>';
